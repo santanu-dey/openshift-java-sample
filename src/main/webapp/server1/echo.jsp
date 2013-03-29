@@ -4,8 +4,8 @@
 <%@ page import="java.util.*" %>
 <% response.setContentType("application/xml"); %>
 <Response>
-<RespnseBody>This is from server 1 at <% java.util.Date now = new java.util.Date(); %>
-<%= now+""+""+now.getTimezoneOffset() %> </RespnseBody>
+<RespnseBody>This is from server 1 at <% java.util.Calendar now = Calendar.getInstance(); %>
+<%= now.getTime() %> </RespnseBody>
 <OriginalRequest>
 	<Headers>
            <Header>
