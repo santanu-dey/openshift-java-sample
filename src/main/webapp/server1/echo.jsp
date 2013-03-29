@@ -2,10 +2,11 @@
 <%@ page import="javax.servlet.http.HttpUtils,java.util.Enumeration" %>
 <%@ page import="java.lang.management.*" %>
 <%@ page import="java.util.*" %>
+<%@ page import="java.io.*" %>
+
 <% response.setContentType("application/xml"); %>
 <Response>
-<RespnseBody>This is from server 1 at <% java.util.Calendar now = Calendar.getInstance(); %>
-<%= now.getTime() %> </RespnseBody>
+<RespnseBody>This is from server 1 at <% java.util.Calendar now = Calendar.getInstance(); %><%= now.getTime() %> </RespnseBody>
 <OriginalRequest>
 	<Headers>
            <Header>
@@ -15,16 +16,13 @@
         </Header>
             
             <Header>
-           <!-- getMethod() returns the name of the HTTP 
-method with which this request was made,
-             for example, GET, POST, or PUT -->
+          
              <Name>HTTP Request Verb</Name>
              <Value><%= request.getMethod() %></Value>
         </Header>
         <Header>
             <Name>Request Path</Name>
-            <!-- getRequestURI() returns the part of this request's URL -->
-            <Value><%= request.getRequestURI() +"?"+request.getQueryString()%></Value>
+                       <Value><%= request.getRequestURI() +"?"+request.getQueryString()%></Value>
         </Header>
         <%
          /*This method returns an enumeration of all the header names this 
@@ -35,16 +33,42 @@ method with which this request was made,
         %>
         <Header>
             <Name> <%= hname %> </Name>
-                <!-- This method returns the value of the 
-specified request header as a String. -->
+               
                 <Value><%= request.getHeader(hname) %></Value>
         </Header>
    <%
         }
    %>
 	</Headers>
+	<%	StringBuilder stringBuilder = new StringBuilder();
+	BufferedReader bufferedReader = null;
+	try {
+	  InputStream inputStream = request.getInputStream();
+	  if (inputStream != null) {
+	   bufferedReader = new BufferedReader(new InputStreamReader(
+	inputStream));
+	   char[] charBuffer = new char[128];
+	   int bytesRead = -1;
+	   while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
+	    stringBuilder.append(charBuffer, 0, bytesRead);
+	   }
+	  } else {
+	   stringBuilder.append("");
+	  }
+	} catch (IOException ex) {
+	  throw ex;
+	} finally {
+	  if (bufferedReader != null) {
+	   try {
+	    bufferedReader.close();
+	   } catch (IOException ex) {
+	    throw ex;
+	   }
+	  }
+	}
+	String body = stringBuilder.toString(); %>
 	<Body>
-	<![CDATA[
+	<![CDATA[<%=body%>
 	]]>
 	</Body>
 </OriginalRequest>
