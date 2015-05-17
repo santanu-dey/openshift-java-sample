@@ -38,8 +38,4 @@ final class MyEnum {
     
     response.setContentType("application/xml");
 
-%>
-
-<UserPreference>
-<%=m.getValues(randomNumber)%>
-</UserPreference>
+%><UserPreference><%=m.getValues(randomNumber)%></UserPreference>
