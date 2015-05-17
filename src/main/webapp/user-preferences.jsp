@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <%
 final class MyEnum {
 
@@ -35,8 +36,10 @@ final class MyEnum {
 
     MyEnum m = new MyEnum();
     
-    response.setContentType("text/plain");
+    response.setContentType("application/xml");
 
 %>
 
+<UserPreference>
 <%=m.getValues(randomNumber)%>
+</UserPreference>
