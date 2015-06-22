@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CustomerInfoWebServiceService" targetNamespace="http://training/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://training/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://training/" schemaLocation="CustomerInfoWebServiceService_schema1.xsd"></import>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldResponse">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="HelloWorld">
+    <wsdl:part name="parameters" element="tns:HelloWorld">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CustomerInfoWebService">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input name="HelloWorld" message="tns:HelloWorld">
+    </wsdl:input>
+      <wsdl:output name="HelloWorldResponse" message="tns:HelloWorldResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomerInfoWebServiceServiceSoapBinding" type="tns:CustomerInfoWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="HelloWorld">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="HelloWorldResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerInfoWebServiceService">
+    <wsdl:port name="CustomerInfoWebServicePort" binding="tns:CustomerInfoWebServiceServiceSoapBinding">
+      <soap:address location="http://localhost:9090/CustomerInfoWebServicePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
