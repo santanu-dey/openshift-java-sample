@@ -32,12 +32,12 @@
                             <form  action="redirect.jsp" autocomplete="on">
                             	<input type="hidden" name="redirect_uri" value="<%=request.getParameter("redirect_uri")%>">
                                 <h1>Acme Consent </h1>
-                                <h2>Dear &nbsp;<%=request.getParameter("username")%>,&nbsp;Console App requests following Acme Info from you:</h2>
+                                <h2>Dear &nbsp;<%=request.getParameter("username")%>,&nbsp;InfoSpot App requests following Acme Info from you:</h2>
                                 <br/>
-                               <div id="list"><li>Your Name</li>
-                               <li>Email and contact details</li>
-                               </div>  
                                
+                                <input type="checkbox" name="basic" value="true" checked="checked"> Basic Profile: Your Name<br>
+  								<input type="checkbox" name="extended" value="true" >Extended Profile: Contact Details<br>
+                               <br/>
                                 <p class="login button"> 
                                     <button type="submit" >Allow Consent</button>
 								</p>
