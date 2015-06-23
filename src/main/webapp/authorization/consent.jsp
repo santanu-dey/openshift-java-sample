@@ -30,6 +30,7 @@
                     <div id="wrapper">
                         <div id="login" class="animate form">
                             <form  action="redirect.jsp" autocomplete="on">
+                            	<input type="hidden" name="redirect_uri" value="<%=request.getParameter("redirect_uri")%>">
                                 <h1>Acme Consent </h1>
                                 <h2>Dear &nbsp;<%=request.getParameter("username")%>,&nbsp;Console App requests following Acme Info from you:</h2>
                                 <br/>

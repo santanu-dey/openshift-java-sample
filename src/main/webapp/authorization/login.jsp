@@ -31,6 +31,7 @@
                         <div id="login" class="animate form">
                             <form  action="consent.jsp" autocomplete="on"> 
                                 <h1>Log in to your Acme Vault</h1> 
+                                <input type="hidden" name="redirect_uri" value="<%=request.getParameter("redirect_uri")%>">
                                 <p> 
                                     <label for="username" class="uname" data-icon="u" > Your email or username </label>
                                     <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
