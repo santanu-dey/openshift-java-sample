@@ -31,12 +31,12 @@
                         <div id="login" class="animate form">
                             <form  action="redirect.jsp" autocomplete="on">
                             	<input type="hidden" name="redirect_uri" value="<%=request.getParameter("redirect_uri")%>">
-                                <h1>Acme Consent </h1>
-                                <h2>Dear &nbsp;<%=request.getParameter("username")%>,&nbsp;InfoSpot App requests following Acme Info from you:</h2>
+                                <h1>MoF Consent </h1>
+                                <h2>Dear &nbsp;<%=request.getParameter("username")%>,&nbsp;InfoSpot App requests following Info from your MoF Database:</h2>
                                 <br/>
                                
-                                <input type="checkbox" name="basic" value="true" checked="checked"> Basic Profile: Your Name<br>
-  								<input type="checkbox" name="extended" value="true" >Extended Profile: Contact Details<br>
+                                <input type="checkbox" name="basic" value="true" > Basic Profile: Your Name<br>
+  								<input type="checkbox" name="extended" value="true" > Extended Profile: Contact Details<br>
                                <br/>
                                 <p class="login button"> 
                                     <button type="submit" >Allow Consent</button>
