@@ -104,7 +104,7 @@
 <br/>
  <div id="response"></div>
 <br/>
-<p>Data response obtained from Server</p>
+<p>InfoSpot App received your data</p>
 <br/>
  <div id="data-response"></div>
  

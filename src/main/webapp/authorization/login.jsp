@@ -9,7 +9,7 @@
     <head>
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title>Login to your MoF Service</title>
+        <title>Login to Govt Service</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
         <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
@@ -30,7 +30,7 @@
                     <div id="wrapper">
                         <div id="login" class="animate form">
                             <form  action="consent.jsp" autocomplete="on"> 
-                                <h1>Login to your MoF Service</h1> 
+                                <h1>Login to Govt Service</h1> 
                                 <input type="hidden" name="redirect_uri" value="<%=request.getParameter("redirect_uri")%>">
                                 <p> 
                                     <label for="username" class="uname" data-icon="u" > Your email or username </label>

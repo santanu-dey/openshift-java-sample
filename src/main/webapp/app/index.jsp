@@ -21,12 +21,12 @@
   <div data-role="main" class="ui-content">
     <p>Welcome!</p>
 
-<p>InfoSpot App needs to access information from MoF</p>
+<p>InfoSpot App needs to access your information with Govt.</p>
 <br/>
 
   <div data-role="main" class="ui-content">
 
-    <a href="http://test-4g-prod.apigee.net/v2.1/oauth/authorize?response_type=code&redirect_uri=http://localhost:8080/training/faces/app/return.jsp&client_id=Z4GHyW8o3JXUrkAkGetWyUYLw99uMAkC" class="ui-btn">Provide access to MoF data</a>
+    <a href="http://test-4g-prod.apigee.net/v2.1/oauth/authorize?response_type=code&redirect_uri=http://localhost:8080/training/faces/app/return.jsp&client_id=Z4GHyW8o3JXUrkAkGetWyUYLw99uMAkC" class="ui-btn">Provide access to Govt. data</a>
   </div>
 
   </div>

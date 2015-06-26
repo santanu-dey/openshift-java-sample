@@ -31,8 +31,8 @@
                         <div id="login" class="animate form">
                             <form  action="redirect.jsp" autocomplete="on">
                             	<input type="hidden" name="redirect_uri" value="<%=request.getParameter("redirect_uri")%>">
-                                <h1>MoF Consent </h1>
-                                <h2>Dear &nbsp;<%=request.getParameter("username")%>,&nbsp;InfoSpot App requests following Info from your MoF Database:</h2>
+                                <h1>Govt Data Consent </h1>
+                                <h2>Dear &nbsp;<%=request.getParameter("username")%>,&nbsp;InfoSpot App requests following Info from your Govt Records:</h2>
                                 <br/>
                                
                                 <input type="checkbox" name="basic" value="true" > Basic Profile: Your Name<br>
