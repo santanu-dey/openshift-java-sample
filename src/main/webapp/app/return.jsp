@@ -23,7 +23,7 @@
 
  <Script>
  var url = "http://test-4g-prod.apigee.net/v2.1/oauth/accesstoken";
- var params = "client_id=Z4GHyW8o3JXUrkAkGetWyUYLw99uMAkC&client_secret=iQ5WifRHg2Al1I32&code=<%=code%>&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftraining%2Ffaces%2Fapp%2Freturn.jsp&grant_type=authorization_code";
+ var params = "client_id=Z4GHyW8o3JXUrkAkGetWyUYLw99uMAkC&client_secret=iQ5WifRHg2Al1I32&code=<%=code%>&redirect_uri=http%3A%2F%2Ftraining-backendservice.rhcloud.com%2Fapp%2Freturn.jsp&grant_type=authorization_code";
  var xhr = new XMLHttpRequest();
  xhr.open("POST", url, true);
  var accesstokenresponse='';
