@@ -10,8 +10,17 @@
     <servlet-name>CustomerInfoWebService</servlet-name>
     <servlet-class>training.CustomerInfoWebService</servlet-class>
   </servlet>
+  <servlet>
+    <display-name>ConvertPayload</display-name>
+    <servlet-name>ConvertPayload</servlet-name>
+    <servlet-class>com.wsg.util.ConvertPayload</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>CustomerInfoWebService</servlet-name>
     <url-pattern>/CustomerInfoWebService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ConvertPayload</servlet-name>
+    <url-pattern>/convert-payload</url-pattern>
   </servlet-mapping>
 </web-app>
