@@ -46,7 +46,7 @@
             <version>2.1.1</version>
             <configuration>
               <outputDirectory>deployments</outputDirectory>
-              <!-- <packagingIncludes>WEB-INF/lib/*.jar</packagingIncludes> -->
+              <packagingIncludes>WEB-INF/lib/*.jar</packagingIncludes> 
               <warName>ROOT</warName>
             </configuration>
           </plugin>
