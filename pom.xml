@@ -20,15 +20,15 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
-            <scope>provided</scope>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.0.1</version>
+      <scope>provided</scope>
     </dependency>
 	<dependency>
-		<groupId>org.json</groupId>
-		<artifactId>json</artifactId>
-		<version>20150729</version>
+     <groupId>org.json</groupId>
+	 <artifactId>json</artifactId>
+	 <version>20150729</version>
 	</dependency> 
   </dependencies>
   <profiles>
@@ -46,7 +46,7 @@
             <version>2.1.1</version>
             <configuration>
               <outputDirectory>deployments</outputDirectory>
-              <packagingIncludes>WEB-INF/lib/*.jar</packagingIncludes>
+              <!-- <packagingIncludes>WEB-INF/lib/*.jar</packagingIncludes> -->
               <warName>ROOT</warName>
             </configuration>
           </plugin>
